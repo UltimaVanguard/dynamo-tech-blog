@@ -1,0 +1,17 @@
+[
+    {
+        "title": "I love HTML",
+        "content": "HTML is the best!",
+        "user_id": 3
+    },
+    {
+        "title": "I love coding",
+        "content": "I love putting together websites!",
+        "user_id": 1
+    },
+    {
+        "title": "Fun with databases",
+        "content": "I like using pg for my database work, but lately I've been learning mongoDB.",
+        "user_id": 2
+    }
+]

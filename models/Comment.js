@@ -18,14 +18,14 @@ Post.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'users',
         key: 'id',
       },
     },
     post_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'post',
+            model: 'posts',
             key: 'id',
           }, 
     }
@@ -35,7 +35,7 @@ Post.init(
     timestamps: true,
     freezeTableName: false,
     underscored: true,
-    modelName: 'post',
+    modelName: 'comment',
   }
 );
 

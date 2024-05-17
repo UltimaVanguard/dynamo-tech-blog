@@ -1,0 +1,17 @@
+[
+    {
+        "content": "I love HTML too!",
+        "user_id": 1,
+        "post_id": 3
+    },
+    {
+        "content": "I use mongoDB quite a bit. I love it!",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "content": "I prefer more backend, but sometimes front-end can be fun.",
+        "user_id": 2,
+        "post_id": 1
+    }
+]
