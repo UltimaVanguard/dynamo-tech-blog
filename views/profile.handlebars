@@ -1,0 +1,20 @@
+<section class="display-flex flex-column align-center">
+    <h2>Welcome {{user.username}}</h2>
+    <p>Your post history</p>    
+</section>
+<div class="display-flex flex-row justify-space-between">
+    {{#each posts as |post|}}
+        <section class="card col-5">            
+            <header>
+                <h4 class="display-inline-block"><a href="/posts/{{id}}">{{title}}</a></h4>
+                <p class="display-inline-block created">Created: {{format_date createdAt}}</p>
+            </header>
+
+            <div class="card-body display-flex justify-space-between">
+                <button class="btn btn-primary" data-btn-id="{{post.id}}">Update</button>
+                <button class="btn btn-danger" data-btn-id="{{post.id}}">Delete</button>
+            </div>
+        </section>
+    {{/each}}
+</div>
+<script src="./js/profile.js"></script>

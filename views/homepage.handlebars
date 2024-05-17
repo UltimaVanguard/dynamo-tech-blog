@@ -1,1 +1,14 @@
-<p>data</p>
+<div class="display-flex flex-row justify-space-between">
+    {{#each posts as |post|}}
+        <section class="card col-5">            
+            <header>
+                <h4 class="display-inline-block"><a href="/posts/{{id}}">{{title}}</a></h4>
+                <p class="display-inline-block creator">By: {{user.username}}</p>
+            </header>
+
+            <div class="card-body">
+                <p>Created: {{format_date createdAt}}</p>
+            </div>
+        </section>
+    {{/each}}
+</div>

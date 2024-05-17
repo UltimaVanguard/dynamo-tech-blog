@@ -11,6 +11,9 @@ router.get('/', async (req, res) => {
                     attributes: ['username'],
                 },
             ],
+            order: [
+                ['createdAt'],
+            ],
         });
 
         const posts = postData.map((post) => post.get({ plain: true }))
@@ -31,10 +34,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
             },
         });
 
+        const userData = await User.findOne({
+            where: {
+                id: req.session.user_id,
+            },
+        });
+
         const posts = postData.map((post) => post.get({ plain: true }))
+        const user = userData.get({ plain: true });
 
         res.render('profile', {
             posts,
+            user,
             user_id: req.session.user_id, 
             logged_in: req.session.logged_in});
     } catch (err) {
@@ -59,13 +70,15 @@ router.get('./posts/:id', async (req,res) => {
                 post_id: req.params.id,
             },
         });
+
+        res.render('post', postData)
     } catch (err) {
         res.status(500).json(err);
     }
 })
 
 router.get('/post', withAuth, async (req, res) => {
-    res.render('post')
+    res.render('newPost')
 })
 
 router.get('/login', async (req, res) => {
