@@ -3,6 +3,7 @@ const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
+      console.log(req.body)
       const newPost = await Post.create({
         ...req.body,
         user_id: req.session.user_id,
@@ -12,6 +13,26 @@ router.post('/', async (req, res) => {
     } catch (err) {
       res.status(400).json(err);
     }
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+    console.log(req.body)
+    const updatePost = await Post.update({
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    res.status(200).json(updatePost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.delete('/:id', async (req, res) => {

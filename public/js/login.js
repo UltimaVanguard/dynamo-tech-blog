@@ -17,9 +17,9 @@ const loginFormHandler = async (event) => {
         alert('Failed to log in.');
       }
     }
-  };
+};
   
-  const signupFormHandler = async (event) => {
+const signupFormHandler = async (event) => {
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
@@ -39,12 +39,13 @@ const loginFormHandler = async (event) => {
         alert('Failed to sign up.');
       }
     }
-  };
+};
+
   
-  document
+document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
   
-  document
+document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);

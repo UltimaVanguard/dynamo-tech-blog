@@ -53,7 +53,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 })
 
-router.get('./posts/:id', async (req,res) => {
+router.get('/posts/:id', async (req,res) => {
     try {
         const postData = await Post.findOne({
             include: [
@@ -67,11 +67,25 @@ router.get('./posts/:id', async (req,res) => {
                 },
             ],
             where: {
-                post_id: req.params.id,
+                id: req.params.id,
             },
         });
 
         res.render('post', postData)
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/post/:id', async (req,res) => {
+    try {
+        const postData = await Post.findOne({
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        res.status(200).json(postData);
     } catch (err) {
         res.status(500).json(err);
     }
