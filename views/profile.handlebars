@@ -1,6 +1,7 @@
 <section class="display-flex flex-column align-center">
     <h2>Welcome {{user.username}}</h2>
-    <p>Your post history</p>    
+    <a href="/post" class="btn btn-primary m-3 p-2">New Post</a>
+    <p>Your post history</p>   
 </section>
 <div class="display-flex flex-row justify-space-between">
     {{#each posts as |post|}}
