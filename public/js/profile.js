@@ -1,29 +1,32 @@
 let updateId;
-let modal = document.getElementById("update");
-let updTitle = document.getElementById("title-update")
-let updContent = document.getElementById("content-update")
+let modal = document.getElementById('update');
+let updTitle = document.getElementById('title-update');
+let updContent = document.getElementById('content-update');
 
 const openModal = async (event) => {
-  updateId = event.target.getAttribute('data-btn-id');
+  if (event.target.hasAttribute('data-upd-id')) {
+    updateId = event.target.getAttribute('data-upd-id');
 
-  const response = await fetch(`/post/${updateId}`, {
-    method: 'GET'
-  });
+    const response = await fetch(`/post/${updateId}`, {
+      method: 'GET'
+    });
 
-  if (response.ok) {
-    const result = await response.json();
-    updTitle.value = result.title;
-    updContent.value =  result.content;
-  } else {
-    alert('Failed to retrieve data');
-    document.location.replace('/dashboard');
+    if (response.ok) {
+      const result = await response.json();
+      updTitle.value = result.title;
+      updContent.value =  result.content;
+    } else {
+      alert('Failed to retrieve data');
+      document.location.replace('/dashboard');
+    }
+
+    modal.style.display = 'block';
   }
-
-  modal.style.display = "block";
 }
 
 const deletePost = async (event) => {
-    const id = event.target.getAttribute('data-btn-id');
+  if (event.target.hasAttribute('data-del-id')) {
+    const id = event.target.getAttribute('data-del-id');
 
     const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
@@ -34,6 +37,7 @@ const deletePost = async (event) => {
     } else {
       alert('Failed to delete project');
     }
+  }
 };
 
 const updatePost = async (event) => {
@@ -60,14 +64,14 @@ const updatePost = async (event) => {
 };
 
 document
-  .querySelector('.btn-modal')
+  .querySelector('.blog-cards')
   .addEventListener('click', openModal);
 
 document
-  .querySelector('.btn-danger')
+  .querySelector('.blog-cards')
   .addEventListener('click', deletePost);
 
-  document
+document
   .querySelector('.update-form')
   .addEventListener('submit', updatePost);
 

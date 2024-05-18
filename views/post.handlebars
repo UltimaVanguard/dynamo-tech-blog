@@ -1,0 +1,43 @@
+<div class="display-flex flex-column align-center">
+    <section class="card col-12">            
+        <header>
+            <h4 class="display-inline-block">{{post.title}}</h4>
+            <p class="display-inline-block creator">By: {{post.user.username}}</p>
+        </header>
+
+        <div class="card-body">
+            <p>{{post.content}}</p>
+            <p class="created">Created: {{format_date post.createdAt}}</p>
+        </div>
+    </section>
+    {{#each post.comments as |comment|}}
+        <section class="card col-10">            
+            <header>
+                <p class="display-inline-block">{{comment.content}}</p>
+                <p class="display-inline-block creator">By: {{comment.user.username}}</p>
+            </header>
+
+            <div class="card-body display-flex justify-space-between">
+                <p class="created">Created: {{format_date comment.createdAt}}</p>
+            </div>
+        </section>
+    {{/each}}
+    <button class="btn btn-primary btn-modal" data-btn-id="{{post.id}}">Comment</button>
+</div>
+<div id="comment" class="modal">
+  <div class="modal-content">
+    <div class="comment-card card p-4">
+        <h2 class="page-title">Add Comment</h2>
+        <form class="form comment-form">
+            <div class="form-group">
+                <label for="content-comment">Comment:</label>
+                <textarea class="form-textarea" type="text" id="content-comment"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
+<script src="./js/post.js"></script>
