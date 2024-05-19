@@ -2,6 +2,10 @@ header h1 {
     font-size: 300%;
 }
 
+body {
+    background-color: lightgray;
+}
+
 textarea {
     resize: none
 }
@@ -18,8 +22,25 @@ form .form-textarea {
     border-radius: 0.3rem;
 }
 
+a {
+    color: crimson;
+}
+
+a:hover {
+    color: darkred;
+}
+
+.header {
+    background-color: darkgray; 
+    border-bottom: 2px solid #000;
+}
+
 .creator {
     font-size: 75%;
+}
+
+.card {
+    background-color: powderblue;
 }
 
 .created {
@@ -40,7 +61,7 @@ form .form-textarea {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: lightgray;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
