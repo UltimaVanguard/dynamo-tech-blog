@@ -3,7 +3,6 @@ const { Post } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-      console.log(req.body)
       const newPost = await Post.create({
         ...req.body,
         user_id: req.session.user_id,
@@ -17,7 +16,6 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    console.log(req.body)
     const updatePost = await Post.update({
         title: req.body.title,
         content: req.body.content,
