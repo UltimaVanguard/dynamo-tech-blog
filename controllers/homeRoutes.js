@@ -98,7 +98,10 @@ router.get('/post/:id', async (req,res) => {
 })
 
 router.get('/post', withAuth, async (req, res) => {
-    res.render('newPost')
+    res.render('newPost', {
+        user_id: req.session.user_id, 
+        logged_in: req.session.logged_in
+    })
 })
 
 router.get('/login', async (req, res) => {
