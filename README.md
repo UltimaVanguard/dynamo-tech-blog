@@ -36,6 +36,22 @@
   On the post page, if you're logged in, you can add a comment to the post.
 
   The session information will last for a day.
+
+  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/homepage.png)
+
+  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/login.png)
+
+  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/dashboard.png)
+
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/update-modal.png)
+
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/new-post.png)
+
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/post.png)
+
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/comment-modal.png)
+
+  Render URL: https://tech-blog-1eh9.onrender.com/
   
 ## Contributions
   
