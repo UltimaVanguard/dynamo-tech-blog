@@ -37,11 +37,11 @@
 
   The session information will last for a day.
 
-  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/homepage.png)
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/images/homepage.png)
 
-  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/login.png)
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/images/login.png)
 
-  ![alt text](https://github.com/UltimaVanguard/weather-forecast/blob/main/assets/images/dashboard.png)
+  ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/images/dashboard.png)
 
   ![alt text](https://github.com/UltimaVanguard/tech-blog/blob/main/assets/update-modal.png)
 
