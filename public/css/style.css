@@ -1,13 +1,27 @@
 header h1 {
+    color: crimson;
     font-size: 300%;
 }
 
 body {
-    background-color: lightgray;
+    background-color: #C5C1C0;
+}
+
+h3 {
+    color: crimson;
+    font-size: 300%;
+}
+
+h4 {
+    color: crimson;
 }
 
 textarea {
     resize: none
+}
+
+form {
+    color: #F7CE3E;
 }
 
 form .form-textarea {
@@ -31,8 +45,16 @@ a:hover {
 }
 
 .header {
-    background-color: darkgray; 
+    font-size: 125%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #0A1612; 
     border-bottom: 2px solid #000;
+}
+
+.home-cards {
+    width: 100%;
 }
 
 .creator {
@@ -40,7 +62,16 @@ a:hover {
 }
 
 .card {
-    background-color: powderblue;
+    color: #F7CE3E;
+    background-color: #1A2930;
+}
+
+.update-card {
+    color: #F7CE3E;
+}
+
+.comment-card {
+    color: #F7CE3E;
 }
 
 .created {
@@ -61,7 +92,7 @@ a:hover {
 }
 
 .modal-content {
-    background-color: lightgray;
+    background-color: #C5C1C0;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;

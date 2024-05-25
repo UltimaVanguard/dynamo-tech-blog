@@ -1,6 +1,10 @@
-<div class="display-flex flex-row justify-space-between">
+<div class="display-flex flex-column">
+    <div class="display-flex flex-row justify-center">
+        <h3>Posts</h3>    
+    </div>
+    <div class="home-cards display-flex flex-row justify-space-between">
     {{#each posts as |post|}}
-        <section class="card col-5">            
+        <section class="card col-4 p-2 m-2">            
             <header>
                 <h4 class="display-inline-block"><a href="/posts/{{id}}">{{title}}</a></h4>
                 <p class="display-inline-block creator">By: {{user.username}}</p>
@@ -11,4 +15,5 @@
             </div>
         </section>
     {{/each}}
+    </div>
 </div>
